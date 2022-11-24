@@ -13,6 +13,7 @@ public class Road
 public class GameManager : MonoBehaviour
 {
     public Transform SpawnZone;
+    public Transform DestroyZone;
     public List<Road> Road;
 
     private void Awake()
