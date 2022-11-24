@@ -8,6 +8,7 @@ public class Guest : MonoBehaviour
     public float MoveSpeed = 0.0f;
 
     public BuyZone SelectZone;
+    public int BuyCount = 0;
 
     public IEnumerator Buy()
     {
@@ -18,6 +19,7 @@ public class Guest : MonoBehaviour
         for (int i = 0; i < RandomBuyCount; i++)
         {
             SelectZone.CurCount--;
+            BuyCount++;
 
             yield return new WaitForSeconds(0.2f);
         }

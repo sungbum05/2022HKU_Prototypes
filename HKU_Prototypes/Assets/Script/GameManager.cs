@@ -117,6 +117,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         SellSnackObj.SetActive(false);
+        DebtMoney -= CurGuest.BuyCount * 1000;
+
         StartCoroutine(OutGuest());
 
         yield break;
