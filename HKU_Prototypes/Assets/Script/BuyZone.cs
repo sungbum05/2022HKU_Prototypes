@@ -10,6 +10,8 @@ public class BuyZone : MonoBehaviour
 
     public Sprite SnackImg;
 
+    public Image LastCountImg;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,6 @@ public class BuyZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        LastCountImg.fillAmount = (float)CurCount / (float)MaxCount;
     }
 }
