@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour
 
         RaycastHit2D hit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.forward, 20.0f);
 
+        if(Input.GetKeyDown(KeyCode.Escape))
+            FillSnackObj.SetActive(false);
+
         if (Input.GetMouseButtonDown(0))
         {
             if (hit2D && hit2D.collider.CompareTag("Sell"))
@@ -54,7 +57,11 @@ public class GameManager : MonoBehaviour
 
             else if((hit2D && hit2D.collider.CompareTag("ShowCase")))
             {
+                FillSnackObj.SetActive(true);
 
+                FillSnackObj.GetComponent<FillSnackSystem>().CurBuyZone = hit2D.collider.transform.parent.GetComponent<BuyZone>();
+
+                FillSnackObj.GetComponent<FillSnackSystem>().ResetSystem();
             }
 
             else if ((hit2D && hit2D.collider.CompareTag("Snack")))
