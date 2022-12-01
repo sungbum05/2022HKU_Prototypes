@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour
             {
                 StartCoroutine(SnackBuy(hit2D.collider.gameObject));
             }
-
         }
     }
 
