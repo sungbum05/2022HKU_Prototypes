@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 
     public GameObject FillSnackObj;
     public GameObject SellObj;
+    public GameObject ChatObj;
 
     public bool IsShowCase;
     public bool IsSell;
@@ -30,6 +31,11 @@ public class Player : MonoBehaviour
         {
             SellObj.gameObject.SetActive(true);
         }
+
+        if (IsChat == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            ChatObj.gameObject.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -46,6 +52,11 @@ public class Player : MonoBehaviour
         {
             IsSell = true;
         }
+
+        if (other.CompareTag("Chat"))
+        {
+            IsChat = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -58,6 +69,11 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Sell"))
         {
             IsSell = false;
+        }
+
+        if (other.CompareTag("Chat"))
+        {
+            IsChat = false;
         }
     }
 }
