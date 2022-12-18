@@ -49,25 +49,25 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (hit2D && hit2D.collider.CompareTag("Sell"))
-            {
-                Debug.Log(hit2D.collider.name);
-                SellSnackObj.SetActive(true);
-            }
+            //if (hit2D && hit2D.collider.CompareTag("Sell"))
+            //{
+            //    Debug.Log(hit2D.collider.name);
+            //    SellSnackObj.SetActive(true);
+            //}
 
-            else if((hit2D && hit2D.collider.CompareTag("ShowCase")))
-            {
-                FillSnackObj.SetActive(true);
+            //else if((hit2D && hit2D.collider.CompareTag("ShowCase")))
+            //{
+            //    FillSnackObj.SetActive(true);
 
-                FillSnackObj.GetComponent<FillSnackSystem>().CurBuyZone = hit2D.collider.transform.parent.GetComponent<BuyZone>();
+            //    FillSnackObj.GetComponent<FillSnackSystem>().CurBuyZone = hit2D.collider.transform.parent.GetComponent<BuyZone>();
 
-                FillSnackObj.GetComponent<FillSnackSystem>().ResetSystem();
-            }
+            //    FillSnackObj.GetComponent<FillSnackSystem>().ResetSystem();
+            //}
 
-            else if ((hit2D && hit2D.collider.CompareTag("Snack")))
-            {
+            //else if ((hit2D && hit2D.collider.CompareTag("Snack")))
+            //{
 
-            }
+            //}
 
             if ((hit2D && hit2D.collider.CompareTag("Card")))
             {

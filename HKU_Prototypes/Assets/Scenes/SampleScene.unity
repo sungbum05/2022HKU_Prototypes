@@ -2744,7 +2744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981989652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.48, y: -3.72, z: 0}
+  m_LocalPosition: {x: -3.1, y: -3.72, z: 0}
   m_LocalScale: {x: 1, y: 1.22, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6845,6 +6845,7 @@ MonoBehaviour:
   FillSnackObj: {fileID: 1980935797}
   SellObj: {fileID: 1427085353}
   ChatObj: {fileID: 1224445192}
+  ChatZone: {fileID: 1205862894}
   IsShowCase: 0
   IsSell: 0
   IsChat: 0
@@ -6872,7 +6873,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5625, y: 1.625}
+  m_Size: {x: 0.3, y: 1.625}
   m_EdgeRadius: 0
 --- !u!50 &1201562301
 Rigidbody2D:
@@ -6988,6 +6989,7 @@ GameObject:
   - component: {fileID: 1205862897}
   - component: {fileID: 1205862896}
   - component: {fileID: 1205862895}
+  - component: {fileID: 1205862898}
   m_Layer: 0
   m_Name: ChatZone
   m_TagString: Chat
@@ -7080,12 +7082,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205862894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -3.72, z: 0}
+  m_LocalPosition: {x: -5.115, y: -3.72, z: 0}
   m_LocalScale: {x: 1, y: 1.22, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205862898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205862894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba13fba9a9803840ab0b6ed502483a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: {fileID: 838924828}
+  Content: {fileID: 663069798}
+  ChatBox: {fileID: 1224445192}
+  ContentList:
+  - Name: Customer
+    Contents: Check please
+  - Name: Player
+    Contents: yes
+  - Name: Customer
+    Contents: thank you
 --- !u!1 &1224445192
 GameObject:
   m_ObjectHideFlags: 0
@@ -7173,6 +7197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba13fba9a9803840ab0b6ed502483a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: {fileID: 0}
+  Content: {fileID: 0}
+  ChatBox: {fileID: 0}
+  ContentList: []
 --- !u!1 &1242171145
 GameObject:
   m_ObjectHideFlags: 0
@@ -7815,7 +7843,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 24
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.5764706, g: 0.86666673, b: 0.5921569, a: 1}
   m_FlipX: 0

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public GameObject FillSnackObj;
     public GameObject SellObj;
     public GameObject ChatObj;
+    public GameObject ChatZone;
 
     public bool IsShowCase;
     public bool IsSell;
@@ -35,6 +36,8 @@ public class Player : MonoBehaviour
         if (IsChat == true && Input.GetKeyDown(KeyCode.Space))
         {
             ChatObj.gameObject.SetActive(true);
+
+            StartCoroutine(ChatZone.GetComponent<Chat>().Dialog());
         }
     }
 
